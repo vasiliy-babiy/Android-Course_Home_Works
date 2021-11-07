@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/beauty1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/secondaryImage"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/beauty2"
+        app:layout_constraintBottom_toBottomOf="@+id/movieDescription"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Beauty and the Beast"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/secondaryImage"
+        app:layout_constraintTop_toBottomOf="@+id/headerImage" />
+
+    <TextView
+        android:id="@+id/movieDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="March 2017 PG 129 minutes"
+        android:translationY="-5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/secondaryImage"
+        app:layout_constraintStart_toStartOf="@+id/movieTitle"
+        app:layout_constraintTop_toBottomOf="@+id/movieTitle" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_bookmark_border_24"
+        app:layout_constraintBottom_toBottomOf="@+id/movieTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/movieTitle"
+        app:layout_constraintTop_toTopOf="@+id/movieTitle" />
+
+    <Button
+        android:id="@+id/rentButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="RENT FROM R29.99"
+        app:layout_constraintEnd_toStartOf="@+id/buyButton"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/secondaryImage"
+        app:layout_constraintTop_toBottomOf="@+id/secondaryImage" />
+
+    <Button
+        android:id="@+id/buyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="BUY FROM R129.99"
+        app:layout_constraintBottom_toBottomOf="@+id/rentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rentButton"
+        app:layout_constraintTop_toTopOf="@+id/rentButton" />
+
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/rentButton"
+        app:layout_constraintStart_toStartOf="@+id/rentButton"
+        app:layout_constraintEnd_toEndOf="@+id/buyButton" />
+
+    <ImageView
+        android:layout_marginTop="16dp"
+        android:id="@+id/ratingIcon"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_circle_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/familyIcon"
+        app:layout_constraintTop_toBottomOf="@+id/topLine" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        app:layout_constraintTop_toTopOf="@+id/ratingIcon"
+        app:layout_constraintEnd_toEndOf="@+id/ratingIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingIcon"
+        app:layout_constraintStart_toStartOf="@+id/ratingIcon"
+        android:textSize="16dp"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/familyIcon"
+        android:src="@drawable/ic_baseline_circle_24"
+        app:layout_constraintStart_toEndOf="@+id/ratingIcon"
+        app:layout_constraintTop_toTopOf="@+id/ratingIcon"
+        app:layout_constraintEnd_toStartOf="@+id/percentIcon"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/percentIcon"
+        android:src="@drawable/ic_baseline_circle_24"
+        app:layout_constraintStart_toEndOf="@+id/familyIcon"
+        app:layout_constraintTop_toTopOf="@+id/familyIcon"
+        app:layout_constraintEnd_toStartOf="@+id/similarIcon"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/similarIcon"
+        app:layout_constraintStart_toEndOf="@+id/percentIcon"
+        app:layout_constraintTop_toTopOf="@+id/familyIcon"
+        android:src="@drawable/ic_baseline_circle_24"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingLabel"
+        app:layout_constraintStart_toStartOf="@+id/ratingIcon"
+        app:layout_constraintEnd_toEndOf="@+id/ratingIcon"
+        android:text="245 ratings"
+        app:layout_constraintTop_toBottomOf="@+id/ratingIcon" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

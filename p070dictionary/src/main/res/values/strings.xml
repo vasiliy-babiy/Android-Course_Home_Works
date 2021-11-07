@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">p071dictionary</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="birds">Birds</string>
+    <string name="sparrow">Sparrow</string>
+    <string name="animals">Animals</string>
+    <string name="plants">Plants</string>
+    <string name="flowers">Flowers</string>
+    <string name="chamomile">Chamomile</string>
+    <string name="select_your_dictionary">Select your dictionary</string>
+    <string name="here_is_your_text_placeholder">Here is your text!</string>
+    <string name="sparrow_description">Your selection is Sparrow</string>
+    <string name="birds_selected_description">Your selection is Birds!</string>
+    <string name="plants_selected_description">Your selection is Plants</string>
+    <string name="chamomile_description">Your selection is Chamomile</string>
+    <string name="violet">Violet</string>
+    <string name="violet_description">Your selection is Violet</string>
+    <string name="colibri">Colibri</string>
+    <string name="colibri_description">Your selection is Colibri</string>
+</resources>

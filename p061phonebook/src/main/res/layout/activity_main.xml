@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/headImage"
+        android:layout_width="wrap_content"
+        android:layout_height="194dp"
+        android:src="@drawable/original_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/purple_200"
+        android:src="@drawable/ic_baseline_star_24"
+        android:translationY="-28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headImage" />
+
+    <ImageView
+        android:id="@+id/phoneIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/ic_baseline_local_phone_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headImage" />
+
+    <ImageView
+        android:id="@+id/phoneIconInvisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_local_phone_24"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/line"
+        app:layout_constraintStart_toStartOf="@+id/phoneIcon"
+        app:layout_constraintTop_toBottomOf="@+id/phoneIcon" />
+
+    <TextView
+        android:id="@+id/phoneNumberVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="(650) 555-1234"
+        app:layout_constraintBottom_toTopOf="@id/googleVoiceLabel"
+        app:layout_constraintStart_toEndOf="@+id/phoneIcon"
+        app:layout_constraintTop_toBottomOf="@+id/headImage"
+        app:layout_constraintTop_toTopOf="@+id/phoneIcon" />
+
+    <TextView
+        android:id="@+id/googleVoiceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Google Voice"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumberVoice"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumberVoice" />
+
+    <ImageView
+        android:id="@+id/googleVoiceMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_message_24"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneNumberVoice"
+        app:layout_constraintEnd_toEndOf="@+id/floatButton"
+        app:layout_constraintStart_toStartOf="@+id/floatButton"
+        app:layout_constraintTop_toTopOf="@+id/phoneNumberVoice" />
+
+    <TextView
+        android:id="@+id/phoneNumberMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(650) 555-4321"
+        app:layout_constraintStart_toStartOf="@+id/googleVoiceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/googleVoiceLabel"
+        app:layout_constraintTop_toTopOf="@+id/phoneIconInvisible" />
+
+    <TextView
+        android:id="@+id/mobileLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@id/phoneNumberMobile"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberMobile" />
+
+    <ImageView
+        android:id="@+id/mobileMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_message_24"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneNumberMobile"
+        app:layout_constraintEnd_toEndOf="@+id/floatButton"
+        app:layout_constraintStart_toStartOf="@+id/floatButton"
+        app:layout_constraintTop_toTopOf="@+id/phoneNumberMobile" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/phonesGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="phoneNumberVoice, phoneNumberMobile"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/emailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mobileLabel"
+        app:layout_constraintTop_toBottomOf="@+id/mobileLabel" />
+
+    <ImageView
+        android:id="@+id/emailIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_baseline_email_24"
+        app:layout_constraintStart_toStartOf="@+id/phoneIcon"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+    <TextView
+        android:id="@+id/emailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="studio@android.com"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumberVoice"
+        app:layout_constraintTop_toTopOf="@+id/emailIcon" />
+
+    <TextView
+        android:id="@+id/emailAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@+id/emailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

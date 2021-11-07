@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/animalOption"
+        android:title="@string/birds" >
+        <!-- "file" submenu -->
+        <menu>
+            <item android:id="@+id/sparrowOption"
+                android:title="@string/sparrow" />
+            <item android:id="@+id/colibriOption"
+                android:title="@string/colibri" />
+        </menu>
+    </item>
+</menu>
